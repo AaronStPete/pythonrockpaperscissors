@@ -5,7 +5,7 @@ scoreComputer = 0
 scoreTies = 0
 
 while True:
-    print('Wins: ' + str(scorePlayer) + ' Loses: ' + str(scoreComputer) + ' Ties: ' + str(scoreTies) )
+    print('Wins: ' + str(scorePlayer) + ' Loses: ' + str(scoreComputer) + ' Ties: ' + str(scoreTies))
 
     print('Please enter "rock" "paper" or "scissors" or the first letter.')
     guess = input()
@@ -20,7 +20,7 @@ while True:
             sys.exit()
     else:
         print('Your input is invalid.')
-        break
+        continue
 
 
     compGuessNum = random.randint(1,3)
