@@ -1,6 +1,11 @@
 import sys, random
 
+scorePlayer = 0
+scoreComputer = 0
+scoreTies = 0
+
 while True:
+    print('Wins: ' + str(scorePlayer) + ' Loses: ' + str(scoreComputer) + ' Ties: ' + str(scoreTies) )
 
     print('Please enter "rock" "paper" or "scissors" or the first letter.')
     guess = input()
@@ -31,10 +36,13 @@ while True:
 
     if compGuessNum == guessNum:
         print('No winner.')
+        scoreTies = scoreTies + 1
     elif (compGuessNum == 1 and guessNum == 2) or (compGuessNum == 2 and guessNum == 3) or (compGuessNum == 3 and guessNum == 1):
         print('You win!')
+        scorePlayer = scorePlayer + 1
     else:
         print ('You lose.')
+        scoreComputer = scoreComputer + 1
 
 
     print('Try again')
