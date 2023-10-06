@@ -4,8 +4,15 @@ scorePlayer = 0
 scoreComputer = 0
 scoreTies = 0
 
+def winLoss(wins, losses):
+
+    if wins != 0 and losses != 0:
+        return int(wins / losses)
+    else:
+        return 0
+
 while True:
-    print('Wins: ' + str(scorePlayer) + ' Loses: ' + str(scoreComputer) + ' Ties: ' + str(scoreTies))
+    print('Wins: ' + str(scorePlayer) + ' Losses: ' + str(scoreComputer) + ' Ties: ' + str(scoreTies) + ' W:L ' + str(winLoss(scorePlayer, scoreComputer)))
 
     print('Please enter "rock" "paper" or "scissors" or the first letter.')
     guess = input()
